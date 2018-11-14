@@ -1,7 +1,7 @@
 version: '2'
 services:
-  aaronsweebook:
-    image: knarfeh/aaronsweebook
+  aaronsw2ebook:
+    image: knarfeh/aaronsw2ebook
     build:
       context: .
       dockerfile: ./.docker/dev/Dockerfile
@@ -9,17 +9,10 @@ services:
     command: ["go", "run", "main.go", "fetch"]
     tty: true
     volumes:
-      - .:/go/src/github.com/ee-book/aaronsweebook/
+      - .:/go/src/github.com/knarfeh/2ebook/aaronsw2ebook/
     environment:
       - URL=http://www.aaronsw.com/weblog/fullarchive
       - DAY_TIME_STAMP=2017-12-22
       - ES_HOST_PORT=http://elasticsearch:9200
       # - ES_HOST_PORT=http://192.168.199.121:9200
       # - no_proxy=true
-    networks:
-      - default
-
-networks:
-  default:
-    external:
-      name: githubissueseebook_githubissueseebook

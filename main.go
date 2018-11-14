@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/ee-book/aaronsweebook/cmd"
+import "github.com/knarfeh/aaronsw2book/cmd"
 
 func main() {
 	cmd.Execute()

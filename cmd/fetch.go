@@ -131,7 +131,7 @@ func main() {
 	}
 	m := metaData{
 		Type:     "aaronsw",
-		Title:    "www-aaronsw-com",
+		Title:    "Aaron Swartz's Archives",
 		BookDesp: "RAW THOUGHT by Aaron Swartz",
 	}
 	bulkMetaData := elastic.NewBulkIndexRequest().Index("eebook").Type("metadata").Id(URL).Doc(m)
@@ -139,7 +139,6 @@ func main() {
 
 	bulkResponse, err := bulkFinalRequest.Do(context.TODO())
 	if err != nil {
-		fmt.Println("err???", err)
+		fmt.Println("err: ", err)
 	}
-	fmt.Println("bulkResponse: ", bulkResponse)
 }

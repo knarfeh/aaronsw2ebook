@@ -67,7 +67,7 @@ func initConfig() {
 		viper.SetConfigFile(cfgFile)
 	}
 
-	viper.SetConfigName(".aaronsweebook") // name of config file (without extension)
+	viper.SetConfigName(".aaronsw2book") // name of config file (without extension)
 	viper.AddConfigPath("$HOME")  // adding home directory as first search path
 	viper.AutomaticEnv()          // read in environment variables that match
 
